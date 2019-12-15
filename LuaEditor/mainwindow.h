@@ -43,8 +43,11 @@ private slots:
 
     void on_actionRedo_triggered();
 
+    void on_textEditing_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString currentFile = "";
 };
+
 #endif // MAINWINDOW_H

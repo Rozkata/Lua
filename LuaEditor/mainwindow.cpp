@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(ui->textEdit, SIGNAL(cursorPositionChanged()), this, SLOT(on_textEditing_clicked()));
+    this-> centralWidget() -> setLayout(new QGridLayout);
     this-> setCentralWidget(ui->textEdit);
 }
 
@@ -14,6 +16,19 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_textEditing_clicked()
+{
+    QTextEdit::ExtraSelection selection ;
+    QList<QTextEdit::ExtraSelection> extraSelections;
+    QColor lineColor = QColor(255, 255, 0, 50);
+    selection.format.setBackground(lineColor);
+    selection.format.setProperty(QTextFormat::FullWidthSelection, true);
+    selection.cursor = ui->textEdit->textCursor();
+    selection.cursor.clearSelection();
+    extraSelections.append(selection);
+    ui->textEdit->setExtraSelections(extraSelections);
+}
 
 void MainWindow::on_actionNew_triggered()
 {
