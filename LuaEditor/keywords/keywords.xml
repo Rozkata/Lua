@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+
+<keywords>
+<first>and</first>
+<second>break</second>
+<third>do</third>
+<fourth>else</fourth>
+<fifth>elseif</fifth>
+<sixth>end</sixth>
+<seventh>for</seventh>
+<eighth>function</eighth>
+<ninth>if</ninth>
+<tenth>local</tenth>
+<eleventh>nil</eleventh>
+<twelvth>not</twelvth>
+<thirteenth>or</thirteenth>
+<fourteenth>repeat</fourteenth>
+<fifteenth>return</fifteenth>
+<sixteenth>then</sixteenth>
+<seventeeth>until</seventeeth>
+<eighteenth>while</eighteenth>
+</keywords>
