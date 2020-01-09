@@ -54,7 +54,7 @@ void MainWindow::on_actionOpen_triggered()
 
 void MainWindow::on_actionSave_As_triggered()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, "Save As");
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"), "", tr("Lua Files (*.lua)"));
     QFile file(fileName);
     if (!file.open(QFile::WriteOnly | QFile::Text)) {
         QMessageBox::warning(this, "Warning", "Cannot save file : " + file.errorString());
